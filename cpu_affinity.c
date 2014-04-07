@@ -17,7 +17,7 @@ int print_cpu_affinity()
 		printf("get_cpu_affinity fail, %s\n", strerror(errno));
 		return -1;
 	}
-	
+
 	printf("cpu affinity: ");
 	for(i = 0; i < CPU_SETSIZE; i++)
 	{
@@ -54,7 +54,7 @@ void hold()
 {
 	while(1)
 	{
-;
+		;
 	}
 }
 
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 	print_cpu_affinity();
 
 	set_cpu_affinity(cpu_affinity);
-	
+
 	print_cpu_affinity();
 
 	hold();
